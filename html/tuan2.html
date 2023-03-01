@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Tuần 2</title>
+    <style>
+        .bai11{
+            padding-left: 10px;
+            height: 640x;width: 520px;
+            border: solid 2px black;
+        }
+        .bai12{
+            padding-left: 3px;
+            height: 100px;width: 200px;
+            border: solid 1px black;
+        }
+        .bai13{
+            padding-left: 3px;
+            height: 350px;width: 230px;
+            border: solid 2px black;
+        }
+        .bai14{
+            padding-left: 3px;
+            height: 380px;width: 650px;
+            border: solid 2px black;
+        }
+        .bai15{
+            padding-left: 3px;
+            height: 1100px;width: 700px;
+        }
+        #bai15a{
+            padding-left: 3px;
+            height: 480px;width: 540px;
+            border: solid 2px black;
+        }
+        #bai15b{
+            padding-left: 3px;
+            height: 520px;width: 540px;
+            border: solid 2px black;
+        }
+        #bai16{
+            padding-left: 5px;
+            height: 500px;width: 350px;
+            border: solid 2px black;
+        }
+        #bai17a{
+            padding-left: 10px;
+            height: 880px;width: 700px;
+            border: solid 2px black;
+            background-color: rgba(233, 187, 17, 0.896);
+        }
+        #bdbai17a{
+            padding-left: 15px;
+            height: 650px;width: 550px;
+        }
+        #botbai17a{
+            padding-top: 10px;
+            text-align: center;
+            padding-left: 15px;
+            height: 10px;width: 550px;
+        }
+        #bai18{
+            padding-left: 5px;
+            height: 80px;width: 350px;
+            border: solid 2px black;
+        }
+        #bai19{
+            padding-left: 5px;
+            height: 1100px;width: 700px;
+            border: solid 2px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Bài 11</h1>
+        <div class="bai11">
+            <img src="data:image/jpeg;base64,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" alt="">
+            <h1>About</h1>
+            <p>Drumbeat is an intitiative that wants to keep the wed <b>open</b> and do it throught <i>pratical project and local events</i> that gather smart, creative people around big ideas, solving problems and building the <b>open web</b></p>
+            <h2>Projects</h2>
+            <ul>
+                <li>Featured </li>
+                <ul>
+                    <li><a href="https://www.mozillalabs.com/en-US/school-of-webcraft/">School of Webcraft</a></li>
+                    <li><a href="https://crisiscommons.org/">Crisis Commons</a></li>
+                </ul>
+                    <li>Latest</li>
+                <ul>
+                    <li><a href="https://code.google.com/archive/p/jessyink/">JessyInk</a></li>
+                    <li><a href="https://privacycamp.eu/">PrivacyCamp</a></li>
+                </ul>
+            </ul>
+            <a href="https://twitter.com/?lang=vi">Twitter</a> /
+            <a href="https://vi-vn.facebook.com/">Facebook</a> /
+            <a href="https://www.flickr.com/">Flickr</a>
+        </div><br><br>
+        <h1>Bài 12</h1>
+        <div class="bai12">
+           <form action="">
+                <label for="name">Name:</label><br>
+                <input type="text" placeholder="Thanh Van"><br><br>
+                <input type="button" value="Submit">
+           </form>
+        </div><br><br>
+        <h1>Bài 13</h1>
+        <div class="bai13">
+            <form action="">
+                <label for="">Name:</label><br>
+                <input type="text" name="txtName" value="" size="20" maxlength="20"><br><br>
+                <label for="">Telephone Number:</label><br>
+                <input type="tel" name="txtTel" value="" size="20" maxlength="20"><br><br>
+                <label for="">Favorite Color:</label><br><br>
+                <input type="color" name="txtColor" value="" size="20" maxlength="20"><br><br>
+                <label for="">Email:</label><br>
+                <input type="email" name="txtEmail" value="" size="20" maxlength="20"><br><br>
+                <label for="">Date of Birth:</label><br>
+                <input type="date" name="txtDate" value="" size="20" maxlength="20"><br><br>
+                <input  type="submit" value="Submit">
+            </form>
+        </div><br><br>
+        <h1>Bài 14</h1>
+        <div class="bai14">
+            <form action="">
+                <caption><h1>Contact US</h1></caption>
+                <p>Use the following form to send a message to Example Cafe</p>
+                <table>
+                    <tr>
+                        <td><label for="">Your email</label></td>  
+                        <td><input type="text" name="txtName" value="" size="20" maxlength="20"></td>   
+                    </tr>
+                    <tr>
+                        <td><label for="">Message</label></td>  
+                        <td><textarea name="Mes" id="Mes" cols="40" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                       <td>How did you hear of us?</td>
+                       <td>
+                            <select name="list" id="list">
+                                <option value="20">Google</option>
+                                <option value="20">Facebook</option>
+                                <option value="20">Zalo</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Newsletter</td>
+                        <td>
+                            <input type="checkbox" name="" id="">
+                            Ensure this box is checked if you would like to receive email updates
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Send message"></td>
+                    </tr>
+                </table><tr>
+            </form>
+        </div>
+    </div><br><br>
+    <h1>Bài 15</h1>
+    <div class="bai15">
+        <br>
+        <form action="" id="bai15a">
+            <caption><h1>Contact Us</h1></caption>
+            <fieldset>
+                <legend>Your message</legend>
+                <table>
+                    <tr>
+                        <td><label for="emailTo">To</label></td>
+                        <td><input type="text" name="txtTo" readonly="readonly" id="emailTo" size="20" value="Example Cafe"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="emailForm">Your email</label></td>
+                        <td><input type="text" name="txtEmail" id="emailForm" size="20" tabindex="1" maxlength="50"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="emailBody">Message</label></td>
+                        <td><textarea name="txtBody" id="emailBody" cols="50" rows="10" tabindex="2"></textarea></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>How you found us:</legend>
+                <table>
+                    <tr>
+                        <td>How did you hear of us</td>
+                        <td>
+                            <select>
+                                <option value="20">Google</option>
+                                <option value="20">Facebook</option>
+                                <option value="20">Zalo</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Newsletter</td>
+                        <td><input type="checkbox" name="check" id="">Ensure this box is checked if you would like to receive email updates</td>
+                    </tr>
+                </table>
+            </fieldset>
+            <input type="button" value="Send message">
+        </form><br><br>
+        <form action="" id="bai15b">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="firstTo">First name:</label>
+                            <input type="text" name="txtFirst" id="firstTo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="lastTo">Last name:</label>
+                            <input type="text" name="txtLast" id="lastTo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="emailTo">E-mail:</label>
+                            <input type="email" name="txtEmail" id="emailTo">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Competition Question</legend>
+                    How tall is the Eiffel Tower in Paris, France?<br>
+                    <input type="radio" name="" id="">584ft <br>
+                    <input type="radio" name="" id="">784ft <br>
+                    <input type="radio" name="" id="">984ft <br>
+                    <input type="radio" name="" id="">1184ft <br>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Tiebreaker Question</legend>
+                In 25 words or less, say why you would like to win $10,000:
+                <textarea name="" id="" cols="40" rows="10"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Enter competition</legend>
+                <input type="button" value="Enter Competition">
+            </fieldset>
+        </form>
+    </div><br><br>
+    <div class="bai16">
+        <h1>Bài 16</h1>
+        <form action="" id="bai16">
+                <caption><h1>Travel reservation form</h1></caption>
+                <b>* denotes mandorory</b><br><br>
+                <label for="nameTo">Full name*:</label><br>
+                <input type="text" name="txtName" id="nameTo" placeholder="FirstName LastName"><br>
+                <label for="emailTo">Email address*:</label><br>
+                <input type="email" name="email" id="emailTo" placeholder="EMAIL_ADDRESS"><br>
+                <label for="tourTo">Select Tour Package*:</label><br>
+                <select name="tour" id="tourTo"><br>
+                    <option value="20">Goa</option>
+                </select><br>
+                <label for="dateTo">Arrival date*:</label><br>
+                <input type="text" name="date" id="dateTo" placeholder="m/d/y"><br>
+                <label for="personTo">Number of persons*:</label><br>
+                <input type="text" name="person" id="personTo"><br>
+                <label for="avail">What would you want to avail?*</label><br>
+                Boarding<input type="checkbox" name="Boarding" id="avail"><br>
+                Fooding<input type="checkbox" name="Fooding" id="avail"><br>
+                Sight seeing<input type="checkbox" name="Sight" id="avail"><br>
+                <label for="codeTo">Discout Coupon code:</label><br>
+                <input type="text" name="code" id="codeTo" placeholder="UNKNOWN_TYPE"><br>
+                <label for="terms">Terms and conditions*</label><br>
+                <input type="radio" name="agree" id="term">I agree 
+                <input type="radio" name="disagree" id="term">I disagree <br>
+                <input type="button" value="Complete reservation">
+        </form>
+    </div><br><br>
+    <h1>Bài 17</h1>
+    <div class="bai17">
+        <form action="" id="bai17a">
+            <legend style="text-align: center;"><b>Surver Form</b></legend><br>
+            If you are interested in purchasing one or more of our products, before ordering please complete some or all of the following survey for our marketing department. Answering any question is optional, and all information will be kept strictly confidential. Thank you very much for your time! <br>
+            <br>
+            <div id="bdbai17a">
+                <label for="nameTo">1. What is your name?</label><br>
+                <input type="text" name="name" id="nameTo"><br><br>
+                <label for="birth">2. What is your date of birth?</label><br>
+                 Month:<select name="month" id="monthTo"><option value="1">January</option></select>
+                Date:<select name="date" id="dateTo"><option value="1">1</option></select>
+                Year:<input type="text" size="2" name="year" id="yearTo"><br><br>
+                <label for="mailingTo">3. What is your mailing address (if you would like to have a hard copy of our catalog sent to you)?</label><br>
+                <textarea name="mailing" id="mailingTo" cols="60" rows="4">Number/P.O. Box/ Route:                                        Street/Avenue/Road:                                        City                                                        State/Zip:
+                </textarea><br><br>
+                <label for="emailTo">4. What is your email address?</label><br>
+                <input type="text" name="email" id="emailTo"><br><br>
+                <label for="productTo">5. Have you viewed our online product catalog?</label><br>
+                <input type="radio" name="yes" id="productTo">Yes
+                <input type="radio" name="no" id="productTo">No <br><br>
+                <label for="checkTo">6. If so, what product(s), besides the one you are ordering, might you be interested in purchasing in the future? (Check all that apply.)</label><br>
+                <input type="checkbox" name="VCR" id="checkTo">VCR <br>
+                <input type="checkbox" name="TV" id="checkTo">Big Screen TV <br>
+                <input type="checkbox" name="Audio" id="checkTo">Audio Equipment <br>
+                <input type="checkbox" name="Video" id="checkTo">Video Equipment <br>
+                <input type="checkbox" name="Camera" id="checkTo">Camera Equipment <br>
+                <input type="checkbox" name="Other" id="checkTo">Other
+                <input type="text" name="other" id="Other" placeholder="Please List"><br><br>
+                <label for="orderTo">7. Do you have any questions, comment or suggestions before proceeding to the Order Form?</label><br>
+                <textarea name="" id="" cols="60" rows="7" placeholder="Your Input:"></textarea>
+            </div><br><br>
+            <div id="botbai17a">
+                <input type="button" value="Send Form">
+                <input type="button" value="Clear Form">
+            </div>
+        </form><br><br>
+        <form action="" id="bdbai17b">
+            <div>
+                <label for="BrowserTo">Browser:</label>
+                <input type="text" name="browser" id="BrowserTo" size="20" maxlength="20" list="tech">
+                <datalist id="tech">
+                    <option value="HTML"></option>
+                </datalist><br><br>
+                <label for="nameTo">Username:</label>
+                <input type="text" name="name" id="nameTo" size="20" maxlength="20"><br><br>
+                <label for="encryptionTo">Encryption</label>
+                <input type="range" name="encryption" id="encryptionTo" min="0" max="100"><br><br>
+                
+            </div>
+        </form>
+    </div><br><br>
+    <h1>Bài 18</h1>
+    <div class="bai18">
+        <form action="" method="get" id="bai18">
+           Please indicate your area of interest:<br>
+            <input type="text" name="txtName" size="20" maxlength="20" list="tech">
+            <datalist id="tech">
+                    <option value="CSS">
+                    <option value="Java">
+                    <option value="JavaScript">
+            </datalist>
+        </form>
+    </div><br><br>
+    <h1>Bài 19</h1>
+    <div class="bai19">
+        <form action="" id="bai19">
+            <p>.mp4</p>
+            <video  poster="C:\Users\LENOVO\Downloads\HTCNW\img\banhbao.png" controls>
+                <source src="C:\Users\LENOVO\Downloads\HTCNW\img\banhbao.mp4" type="">
+            </video>
+            <p>.webm</p>
+            <video  poster="C:\Users\LENOVO\Downloads\HTCNW\img\nui.png" controls>
+                <source src="C:\Users\LENOVO\Downloads\HTCNW\img\nui.webm" type="">
+            </video>
+            <p>.ogv</p>
+            <video  poster="C:\Users\LENOVO\Downloads\HTCNW\img\bien.png" controls>
+                <source src="C:\Users\LENOVO\Downloads\HTCNW\img\bien.ogv" type="">
+            </video>
+        </form>
+    </div><br><br>
+    <h1>Bài 19</h1>
+    <div class="bai20">
+        <form action="" id="bai20">
+            <iframe width="420" height="315" src="https://www.youtube.com/watch?v=yXxnjh9-mWM" 
+            frameborder="0" allowfullscreen>
+            </iframe>
+        </form>
+    </div>
+</body>
+</html>
